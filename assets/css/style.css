@@ -4684,6 +4684,10 @@ pre {
       font-weight: 900;
       -webkit-font-smoothing: antialiased;
       margin-right: 0.2em; }
+  .site-header .nav {
+    float: right; }
+    .site-header .nav a:not(:last-child) {
+      margin-right: 1rem; }
 
 .site-title {
   font-size: 26px;
