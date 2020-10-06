@@ -23,17 +23,49 @@
     <span class="social_links">
         
     </span>
-    <br>
-    <span class="nav">
-      <a href="/books">Books</a>
-      <a href="/request">Request Content</a>
-      <a href="/howtodownload">How to download</a>
-      
-      
+    <span class="collapse">
+      <a href="#" onclick="showmenu();">
+        <i class="fa fa-bars"></i>
+      </a>
     </span>
-    
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="/books">Books</a>
+        </li>
+        <li>
+          <a href="/request">Request Content</a>
+        </li>
+        <li>
+          <a href="/howtodownload">How to download</a>
+        </li>
+        <!-- <li>
+          <a href="/donate">Donate</a>
+        </li>
+        <li>
+          <a href="/help">Help</a>
+        </li> -->
+        <li></li>
+      </ul>
+    </nav>
   </div>
 </div>
+<script>
+var a = 0;
+function showmenu()
+{
+    var x = document.getElementById('nav');
+    x.classList.toggle('show');
+    x.classList.toggle('animated');
+    if ( a === 0) {
+        x.style.display = 'block';
+        a=1;
+    } else {
+        x.style.display = 'none';
+        a=0;
+    }
+}
+</script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         
@@ -91,15 +123,14 @@ button:hover{
   display: none;
 }
 </style>
-
+<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 <div class="post">
   
 
   <form action="https://send.pageclip.co/b3xd4x67AFF1UhdnWSV9BHAF239HE4j7" class="pageclip-form" method="post">
     <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-    <input type="text" name="name" placeholder="Your name" />
+    <input type="text" name="name" placeholder="write here ..." />
     <input type="email" name="email" placeholder="yourmail@example.com" />
-    <textarea cols="30" rows="10" placeholder="write here..."></textarea>
     <!-- This button will have a loading spinner. Keep the inner span for best results. -->
     <button type="submit" class="pageclip-form__submit">
       <span>Send</span>

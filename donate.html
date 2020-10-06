@@ -23,17 +23,49 @@
     <span class="social_links">
         
     </span>
-    <br>
-    <span class="nav">
-      <a href="/books">Books</a>
-      <a href="/request">Request Content</a>
-      <a href="/howtodownload">How to download</a>
-      
-      
+    <span class="collapse">
+      <a href="#" onclick="showmenu();">
+        <i class="fa fa-bars"></i>
+      </a>
     </span>
-    
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="/books">Books</a>
+        </li>
+        <li>
+          <a href="/request">Request Content</a>
+        </li>
+        <li>
+          <a href="/howtodownload">How to download</a>
+        </li>
+        <!-- <li>
+          <a href="/donate">Donate</a>
+        </li>
+        <li>
+          <a href="/help">Help</a>
+        </li> -->
+        <li></li>
+      </ul>
+    </nav>
   </div>
 </div>
+<script>
+var a = 0;
+function showmenu()
+{
+    var x = document.getElementById('nav');
+    x.classList.toggle('show');
+    x.classList.toggle('animated');
+    if ( a === 0) {
+        x.style.display = 'block';
+        a=1;
+    } else {
+        x.style.display = 'none';
+        a=0;
+    }
+}
+</script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="post">
