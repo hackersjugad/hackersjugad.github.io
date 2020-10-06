@@ -4799,6 +4799,26 @@ img {
 @media (max-width: 354px) {
   .card {
     width: 90vw !important; } }
+.pageclip-form {
+  display: flex;
+  flex-direction: column; }
+
+.pageclip-form__submit {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: #637AFE;
+  font-weight: 800; }
+
+.pageclip-form__submit:hover {
+  color: #F24784; }
+
+input[type="text"], [type="email"], textarea {
+  margin-top: 1rem; }
+  .theme--dark input[type="text"], .theme--dark [type="email"], .theme--dark textarea {
+    color: #DAE4ED; }
+  .theme--light input[type="text"], .theme--light [type="email"], .theme--light textarea {
+    color: #1E2227; }
+
 /* post */
 .post-title {
   text-align: left; }
