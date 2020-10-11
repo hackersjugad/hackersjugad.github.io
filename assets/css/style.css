@@ -4717,8 +4717,7 @@ nav > ul {
 
 nav ul > li {
   display: inline-block;
-  transition: all 1s ease;
-  padding-top: 7px; }
+  transition: all 1s ease; }
   nav ul > li:not(:last-child) {
     margin-right: 1rem; }
 
@@ -4752,18 +4751,6 @@ nav ul > li {
     flex-grow: 1;
     opacity: 1;
     flex: 1; } }
-@media screen and (max-width: 399px) {
-  nav {
-    display: none; }
-
-  nav ul > li {
-    display: flex; }
-
-  .collapse {
-    display: block; } }
-@media screen and (min-width: 400px) {
-  nav {
-    display: block !important; } }
 /**
  * Author box
  */
