@@ -4665,7 +4665,7 @@ pre {
 
 .site-header {
   min-height: 55.95px;
-  line-height: 54px;
+  line-height: 48px;
   position: relative; }
   .site-header .blinking_cursor {
     animation: blinker 1s none infinite;
@@ -4705,7 +4705,8 @@ pre {
 .wrapper {
   text-align: justify; }
 
-nav {
+#nav {
+  display: block;
   float: right; }
 
 nav > ul {
