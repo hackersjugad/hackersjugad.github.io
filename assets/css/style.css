@@ -4691,7 +4691,7 @@ pre {
   margin-bottom: 0; }
   @media screen and (max-width: 600px) {
     .site-title {
-      padding-right: 45px; } }
+      padding-right: 15px; } }
   .site-title, .site-title:visited, .site-title:hover {
     text-decoration: none; }
     .theme--dark .site-title, .theme--dark .site-title:visited, .theme--dark .site-title:hover {
@@ -4726,7 +4726,7 @@ nav ul > li {
   font-size: 1.5rem; }
 
 /* End Navbar */
-/* Start Menue Right */
+/* Start Menu Right */
 .collapse {
   position: relative;
   float: right;
@@ -4752,6 +4752,15 @@ nav ul > li {
     flex-grow: 1;
     opacity: 1;
     flex: 1; } }
+@media screen and (max-width: 526px) {
+  .pc-nav {
+    display: none; }
+
+  .m-nav {
+    display: block; } }
+@media screen and (min-width: 527px) {
+  .m-nav {
+    display: none; } }
 /**
  * Author box
  */
@@ -5079,7 +5088,7 @@ input[type="text"], [type="email"], textarea {
   .social_links > a {
     display: inline-block;
     padding-left: 0.3em;
-    font-size: 27px; }
+    font-size: 31px; }
     .theme--dark .social_links > a {
       color: #b8cbdc; }
     .theme--light .social_links > a {
@@ -5154,6 +5163,141 @@ ul.related-posts {
   left: 0;
   width: 100%;
   height: 100%; }
+
+@keyframes bugfix {
+  from {
+    padding: 0; }
+  to {
+    padding: 0; } }
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0; }
+  to {
+    padding: 0; } }
+#overlay-button {
+  position: fixed;
+  right: .5em;
+  bottom: .5em;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 32px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  height: 48px;
+  overflow: hidden; }
+  .theme--dark #overlay-button {
+    color: #1E2227; }
+  .theme--light #overlay-button {
+    color: #f2f6f9; }
+  .theme--dark #overlay-button {
+    background-color: #DAE4ED; }
+  .theme--light #overlay-button {
+    background-color: #1E2227; }
+  #overlay-button img {
+    height: 40px;
+    margin-left: 6px; }
+  #overlay-button span {
+    height: 4px;
+    width: 35px;
+    margin-top: 20px;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    transition-delay: .3s;
+    transition: all .5s ease-in-out; }
+    .theme--dark #overlay-button span {
+      background-color: #1E2227; }
+    .theme--light #overlay-button span {
+      background-color: #f2f6f9; }
+    #overlay-button span:before {
+      top: -10px;
+      visibility: visible; }
+    #overlay-button span:after {
+      top: 10px; }
+    #overlay-button span:before, #overlay-button span:after {
+      height: 4px;
+      width: 35px;
+      border-radius: 2px;
+      position: absolute;
+      content: "";
+      transition-delay: .3s;
+      transition: all .5s ease-in-out; }
+      .theme--dark #overlay-button span:before, .theme--dark #overlay-button span:after {
+        background-color: #1E2227; }
+      .theme--light #overlay-button span:before, .theme--light #overlay-button span:after {
+        background-color: #f2f6f9; }
+  .theme--dark #overlay-button:hover span, .theme--dark #overlay-button:hover span:before, .theme--dark #overlay-button:hover span:after {
+    background-color: #4a5461; }
+  .theme--light #overlay-button:hover span, .theme--light #overlay-button:hover span:before, .theme--light #overlay-button:hover span:after {
+    background-color: white; }
+
+input[type=checkbox] {
+  display: none; }
+
+input[type=checkbox]:checked ~ #overlay {
+  visibility: visible; }
+
+input[type=checkbox]:not(:checked) ~ #overlay-button .menu-icon {
+  display: none; }
+
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+  background: transparent; }
+  input[type=checkbox]:checked ~ #overlay-button:hover span:before, input[type=checkbox]:checked ~ #overlay-button span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+    opacity: 1; }
+  input[type=checkbox]:checked ~ #overlay-button:hover span:after, input[type=checkbox]:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(7px, -7px); }
+input[type=checkbox]:checked ~ #overlay-button .menu-icon {
+  display: block; }
+input[type=checkbox]:checked ~ #overlay-button .menu-text {
+  display: none; }
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  visibility: hidden;
+  position: fixed;
+  top: 0; }
+  #overlay.active {
+    visibility: visible; }
+  #overlay ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 0 .5em 0 0;
+    position: fixed;
+    right: 0;
+    bottom: 57px;
+    list-style-type: none; }
+    #overlay ul li {
+      margin-bottom: .7em;
+      border-radius: 32px;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 35px;
+      line-height: normal !important;
+      display: flex;
+      align-items: center;
+      overflow: hidden; }
+      .theme--dark #overlay ul li {
+        color: #1E2227; }
+      .theme--light #overlay ul li {
+        color: #f2f6f9; }
+      .theme--dark #overlay ul li {
+        background-color: #DAE4ED; }
+      .theme--light #overlay ul li {
+        background-color: #1E2227; }
+      #overlay ul li a {
+        text-decoration: none;
+        font-size: 1.2em; }
+        .theme--dark #overlay ul li a:hover {
+          color: #1E2227; }
+        .theme--light #overlay ul li a:hover {
+          color: #f2f6f9; }
 
 .toggleWrapper {
   display: inline-block;

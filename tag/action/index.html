@@ -30,9 +30,9 @@
   <div class="wrapper">
     <a class="site-title" rel="author" href="/">Hacker&#39;s Jugad<b class="command_prompt"></b><b class="blinking_cursor">_</b></a>
     <span class="social_links">
-        
+        <a class="color-blue-hover" href="https://t.me/hackersjugad" target="_blank"><i class="fab fa-telegram"></i></a>
     </span>
-    <div>
+    <div class="pc-nav">
       
       <nav id="nav">
         <ul>
@@ -55,24 +55,53 @@
       </nav>
     </div>
   </div>
-  <div class="wrapper">
-      <nav>
-        <ul>
-          <li>
-            <a href="http://imageoptimizer.glitch.me/" target="_blank">Image Optimizer</a>
-          </li>
-          <li>
-            <a href="https://browseranalyzer.glitch.me/analyzer.html" target="_blank">Browser Analyzer</a>
-          </li>
-          <li>
-            <a href="http://issinfo.glitch.me/" target="_blank">ISS Info</a>
-          </li>
-          <li>
-            <a href="https://appetize.io/embed/k6ukq07zqmw445u326mnd2efa4" target="_blank" rel="noreferrer">Virtual Android</a>
-          </li>
-        </ul>
-      </nav>
+  <div class="wrapper pc-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="http://imageoptimizer.glitch.me/" target="_blank">Image Optimizer</a>
+        </li>
+        <li>
+          <a href="https://browseranalyzer.glitch.me/analyzer.html" target="_blank">Browser Analyzer</a>
+        </li>
+        <li>
+          <a href="http://issinfo.glitch.me/" target="_blank">ISS Info</a>
+        </li>
+        <li>
+          <a href="https://appetize.io/embed/k6ukq07zqmw445u326mnd2efa4" target="_blank" rel="noreferrer">Virtual Android</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="m-nav">
+    <input type="checkbox" id="overlay-input" />
+    <label for="overlay-input" id="overlay-button"><span class="menu-icon"></span><strong class="menu-text">MENU </strong> <img src="/assets/white.svg" id="menu" /></label>
+    <div id="overlay">
+      <ul>
+        <li>
+          <a href="/books">Books</a>
+        </li>
+        <li>
+          <a href="/request">Request Content</a>
+        </li>
+        <li>
+          <a href="/howtodownload" class="how-to-download">How to download</a>
+        </li>
+        <li>
+          <a href="http://imageoptimizer.glitch.me/" target="_blank">Image Optimizer</a>
+        </li>
+        <li>
+          <a href="https://browseranalyzer.glitch.me/analyzer.html" target="_blank">Browser Analyzer</a>
+        </li>
+        <li>
+          <a href="http://issinfo.glitch.me/" target="_blank">ISS Info</a>
+        </li>
+        <li>
+          <a href="https://appetize.io/embed/k6ukq07zqmw445u326mnd2efa4" target="_blank" rel="noreferrer">Virtual Android</a>
+        </li>
+    </ul>
     </div>
+  </div>
 </div>
 <script>
 var a = 0;
@@ -349,71 +378,9 @@ function showmenu()
       </div>
     </main><footer class="site-footer">
   <div class="wrapper">
-    <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a></i><div class="toggleWrapper">
-    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
-    <label for="theme-toggle" class="toggle">
-    <span class="toggle__handler">
-      <span class="crater crater--1"></span>
-      <span class="crater crater--2"></span>
-      <span class="crater crater--3"></span>
-    </span>
-        <span class="star star--1"></span>
-        <span class="star star--2"></span>
-        <span class="star star--3"></span>
-        <span class="star star--4"></span>
-        <span class="star star--5"></span>
-        <span class="star star--6"></span>
-    </label>
-</div>
-<script type="text/javascript">
-const theme = localStorage.getItem('theme');
-
-if (theme === "light") {
-    document.documentElement.setAttribute('data-theme', 'light');
-} else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
-const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
-
-function activateDarkTheme() {
-    document.getElementById('theme-toggle').checked = true;
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.documentElement.classList.add('theme--dark');
-    document.documentElement.classList.remove('theme--light');
-	document.getElementById("theme-toggle").className = 'light';
-    window.localStorage.setItem('theme', 'dark');
-    document.getElementById("avatar").setAttribute("src", '/assets/white.svg');
-}
-
-function activateLightTheme() {
-    document.getElementById('theme-toggle').checked = false;
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.documentElement.classList.add('theme--light');
-    document.documentElement.classList.remove('theme--dark');
-	document.getElementById("theme-toggle").className = 'dark';
-	window.localStorage.setItem('theme', 'light');
-    document.getElementById("avatar").setAttribute("src", '/assets/black.svg');
-}
-
-if (theme === "dark") {
-    activateDarkTheme();
-} else if (theme === "light") {
-    activateLightTheme();
-} else if  (userPrefers === "light") {
-    activateDarkTheme();
-} else {
-    activateDarkTheme();
-}
-
-function modeSwitcher() {
-	let currentMode = document.documentElement.getAttribute('data-theme');
-	if (currentMode === "dark") {
-	    activateLightTheme();
-	} else {
-	    activateDarkTheme();
-	}
-}
-</script></div>
+    <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a></i>
+      
+    </div>
   </div>
 </footer>
 
