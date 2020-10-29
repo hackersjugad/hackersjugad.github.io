@@ -120,73 +120,6 @@ function showmenu()
 }
 </script>
 <main class="page-content" aria-label="Content">
-      <div class="wrapper" style="margin-top:5px;margin-bottom:5px;"><div class="toggleWrapper">
-    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
-    <label for="theme-toggle" class="toggle">
-    <span class="toggle__handler">
-      <span class="crater crater--1"></span>
-      <span class="crater crater--2"></span>
-      <span class="crater crater--3"></span>
-    </span>
-        <span class="star star--1"></span>
-        <span class="star star--2"></span>
-        <span class="star star--3"></span>
-        <span class="star star--4"></span>
-        <span class="star star--5"></span>
-        <span class="star star--6"></span>
-    </label>
-</div>
-<script type="text/javascript">
-const theme = localStorage.getItem('theme');
-
-if (theme === "light") {
-    document.documentElement.setAttribute('data-theme', 'light');
-} else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
-const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
-
-function activateDarkTheme() {
-    document.getElementById('theme-toggle').checked = true;
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.documentElement.classList.add('theme--dark');
-    document.documentElement.classList.remove('theme--light');
-	document.getElementById("theme-toggle").className = 'light';
-    window.localStorage.setItem('theme', 'dark');
-    document.getElementById("avatar").setAttribute("src", '/assets/white.svg');
-    document.getElementById("menu").setAttribute("src", '/assets/black.svg');
-}
-
-function activateLightTheme() {
-    document.getElementById('theme-toggle').checked = false;
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.documentElement.classList.add('theme--light');
-    document.documentElement.classList.remove('theme--dark');
-	document.getElementById("theme-toggle").className = 'dark';
-	window.localStorage.setItem('theme', 'light');
-    document.getElementById("avatar").setAttribute("src", '/assets/black.svg');
-    document.getElementById("menu").setAttribute("src", '/assets/white.svg');
-}
-
-if (theme === "dark") {
-    activateDarkTheme();
-} else if (theme === "light") {
-    activateLightTheme();
-} else if  (userPrefers === "light") {
-    activateDarkTheme();
-} else {
-    activateDarkTheme();
-}
-
-function modeSwitcher() {
-	let currentMode = document.documentElement.getAttribute('data-theme');
-	if (currentMode === "dark") {
-	    activateLightTheme();
-	} else {
-	    activateDarkTheme();
-	}
-}
-</script></div>
       <div class="wrapper">
         <div class="toggleWrapper">
     <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
@@ -256,6 +189,30 @@ function modeSwitcher() {
 }
 </script><h1 class="post-title">articles tagged with <a class="tag" href="/tag/it-books/">it-books</a></h1>
   <div class="post-links">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -450,7 +407,7 @@ function modeSwitcher() {
 
   
   <h2>all tags</h2>
-  <div class="tag-cloud"><a href="/tag/action/" class="set-2">action</a> <a href="/tag/adventure/" class="set-1">adventure</a> <a href="/tag/amazon-prime/" class="set-1">amazon-prime</a> <a href="/tag/amazon-prime-videos/" class="set-1">amazon-prime-videos</a> <a href="/tag/animation/" class="set-1">animation</a> <a href="/tag/biography/" class="set-1">biography</a> <a href="/tag/books/" class="set-1">books</a> <a href="/tag/comedy/" class="set-3">comedy</a> <a href="/tag/coronavirus/" class="set-1">coronavirus</a> <a href="/tag/crime/" class="set-2">crime</a> <a href="/tag/download/" class="set-5">download</a> <a href="/tag/drama/" class="set-4">drama</a> <a href="/tag/family/" class="set-1">family</a> <a href="/tag/fantasy/" class="set-1">fantasy</a> <a href="/tag/hacking-books/" class="set-1">hacking-books</a> <a href="/tag/history/" class="set-1">history</a> <a href="/tag/horror/" class="set-1">horror</a> <a href="/tag/information-technology/" class="set-1">information-technology</a> <a href="/tag/it-books/" class="set-1">it-books</a> <a href="/tag/mirzapur/" class="set-1">mirzapur</a> <a href="/tag/movie/" class="set-4">movie</a> <a href="/tag/mystery/" class="set-1">mystery</a> <a href="/tag/netflix/" class="set-2">netflix</a> <a href="/tag/romance/" class="set-2">romance</a> <a href="/tag/sonyliv/" class="set-1">sonyliv</a> <a href="/tag/thriller/" class="set-1">thriller</a> <a href="/tag/tv-series/" class="set-1">tv-series</a> <a href="/tag/zee-studios/" class="set-1">zee-studios</a> <a href="/tag/zee5/" class="set-1">zee5</a></div>
+  <div class="tag-cloud"><a href="/tag/action/" class="set-3">action</a> <a href="/tag/adventure/" class="set-1">adventure</a> <a href="/tag/amazon-prime/" class="set-1">amazon-prime</a> <a href="/tag/amazon-prime-videos/" class="set-1">amazon-prime-videos</a> <a href="/tag/animation/" class="set-1">animation</a> <a href="/tag/biography/" class="set-1">biography</a> <a href="/tag/books/" class="set-1">books</a> <a href="/tag/comedy/" class="set-3">comedy</a> <a href="/tag/coronavirus/" class="set-1">coronavirus</a> <a href="/tag/crime/" class="set-2">crime</a> <a href="/tag/download/" class="set-5">download</a> <a href="/tag/drama/" class="set-5">drama</a> <a href="/tag/family/" class="set-1">family</a> <a href="/tag/fantasy/" class="set-2">fantasy</a> <a href="/tag/hacking-books/" class="set-1">hacking-books</a> <a href="/tag/history/" class="set-1">history</a> <a href="/tag/horror/" class="set-1">horror</a> <a href="/tag/information-technology/" class="set-1">information-technology</a> <a href="/tag/it-books/" class="set-1">it-books</a> <a href="/tag/mirzapur/" class="set-1">mirzapur</a> <a href="/tag/movie/" class="set-4">movie</a> <a href="/tag/mystery/" class="set-1">mystery</a> <a href="/tag/netflix/" class="set-2">netflix</a> <a href="/tag/romance/" class="set-2">romance</a> <a href="/tag/sci-fi/" class="set-1">sci-fi</a> <a href="/tag/sonyliv/" class="set-2">sonyliv</a> <a href="/tag/thriller/" class="set-2">thriller</a> <a href="/tag/tv-series/" class="set-1">tv-series</a> <a href="/tag/zee-studios/" class="set-1">zee-studios</a> <a href="/tag/zee5/" class="set-1">zee5</a></div>
   
 
 
