@@ -133,7 +133,14 @@ function showmenu()
 </script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="wrapper"><div class="toggleWrapper">
+        
+  
+<div class="author-box">
+    
+<img src="/assets/white.svg" class="author-avatar" alt="Avatar" id="avatar"/>
+Hi there, We provide <strong>web-series, movies</strong> download links, blogs and video tutorials on <strong>hacking, cyber security, linux, unix, and windows</strong> tips and triks. You can request content by going to <strong><a href='/request'>Request content</a></strong> page. You can search content by clicking on related tag, all tags are available on the bottom of the site. 
+
+</div><div class="toggleWrapper">
     <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
     <label for="theme-toggle" class="toggle">
     <span class="toggle__handler">
@@ -199,11 +206,30 @@ function modeSwitcher() {
 	    activateDarkTheme();
 	}
 }
-</script></div>
+</script><!-- Html Elements for Search -->
+<div id="search-container">
+<input type="text" id="search-input" placeholder="search...">
+<ul id="results-container" class="search-result"></ul>
+</div>
+
+
+<!-- Script pointing to search-script.js -->
+<script src='/assets/js/search-script.js' type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+})
+</script>
+
+
 <div class="post">
   <h1 class="post-title">Credits</h1>
   <p>A special thanks to <strong><a href="http://github.com" target="_blank">GitHub</a></strong> for providing great hosting service And to all the creators and contributers of <a href="http://jekyllrb.com" target="_blank">jekyll</a> for providing a great tool.</p>
-  <p>We also like to say thanks to <a href="https://github.com/bitbrain">Miguel Gonzalez Sanchez</a> for providing such a good theme.</p>
+  <p>We also like to say thanks to <a href="https://github.com/bitbrain">Miguel Gonzalez Sanchez</a> for providing such a good base theme.</p>
   <br>
   <p><a href="/">Go To Home</a></p>
 </div>
