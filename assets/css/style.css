@@ -4752,21 +4752,24 @@ nav ul > li {
     flex-grow: 1;
     opacity: 1;
     flex: 1; } }
-@media screen and (max-width: 526px) {
+@media screen and (max-width: 600px) {
   .pc-nav {
     display: none; }
 
   .m-nav {
     display: block; } }
-@media screen and (min-width: 527px) {
+@media screen and (min-width: 601px) {
   .m-nav {
     display: none; } }
 /**
  * Author box
  */
+.theme-toggle-placement {
+  position: relative;
+  display: flow-root; }
+
 .author-box {
   margin-bottom: 1em;
-  text-align: left;
   min-height: 72px;
   font-style: italic; }
   .author-box > .author-avatar {
