@@ -227,6 +227,105 @@ SimpleJekyllSearch({
 </script>
 
 
+<!-- Featured movies -->
+<h1 class="featured">Featured Movies</h1>
+<div class="carousel-cover">
+  <button id="slideLeft1" type="button"><span class="fa fa-angle-left"></span></button>
+  <div class="carousel-body" id="carousel-body1">
+    
+      
+      <a href="/2020/11/03/Kaali-khuhi-netflix.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/kaalikhuhi.jpg" alt="Kaali khuhi">
+      </a>
+    
+      
+      <a href="/2020/11/03/Footfairy-zee5.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/footfairy.jpg" alt="Footfairy">
+      </a>
+    
+      
+      <a href="/2020/11/07/Over-The-moon-netflix.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/overthemoon.jpg" alt="Over The Moon">
+      </a>
+    
+      
+      <a href="/2020/11/07/Class-of-83-netflix.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/classof83.jpg" alt="Class of ‘83">
+      </a>
+    
+      
+      <a href="/2020/11/08/Shakuntala-Devi-amazon-prime.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/shakuntaladevi.jpg" alt="Shakuntala Devi">
+      </a>
+    
+      
+      <a href="/2020/11/05/Ginny-Weds-Sunny-Netflix.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/ginnywedssunny.jpg" alt="Ginny Weds Sunny">
+      </a>
+    
+      
+      <a href="/2020/11/05/Serious-Men-netflix.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/seriousmen.jpg" alt="Serious Men">
+      </a>
+    
+      
+      <a href="/2020/11/07/Khuda-haafiz-hotstar.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/khudahaafiz.jpg" alt="Khuda haafiz">
+      </a>
+    
+      
+      <a href="/2020/10/26/Comedy-Couple-zee5-watch-1080p.html">
+        <img class="carousel-img" src="/assets/thumbs/movies/comedycouple.jpg" alt="Comedy Couple">
+      </a>
+    
+  </div>
+  <button id="slideRight1" type="button"><span class="fa fa-angle-right"></span></button>
+</div>
+
+<!-- Featured web-series -->
+<h1 class="featured">Featured Web Series</h1>
+<div class="carousel-cover">
+  <button id="slideLeft2" type="button"><span class="fa fa-angle-left"></span></button>
+  <div class="carousel-body" id="carousel-body2">
+    
+      
+      <a href="/2020/10/23/Mirzapur-Season2-Online-Episode-streamed-on-Amazon-Prime-in-720p.html">
+        <img class="carousel-img" src="/assets/thumbs/series/mirzapurs2.jpg" alt="Mirzapur S2">
+      </a>
+    
+      
+      <a href="/2020/10/26/Scam-1992-The-Harshad-Mehta-Story.html">
+        <img class="carousel-img" src="/assets/thumbs/series/scam1992.jpg" alt="Scam 1992: The Harshad Mehta Story">
+      </a>
+    
+      
+      <a href="/2020/10/29/Undekhi.html">
+        <img class="carousel-img" src="/assets/thumbs/series/undekhi.jpg" alt="Undekhi">
+      </a>
+    
+      
+      <a href="/2020/10/29/JL-50.html">
+        <img class="carousel-img" src="/assets/thumbs/series/jl50.jpg" alt="JL 50">
+      </a>
+    
+      
+      <a href="/2020/11/03/Taish-Zee5.html">
+        <img class="carousel-img" src="/assets/thumbs/series/taish.jpg" alt="Taish">
+      </a>
+    
+      
+      <a href="/2020/11/08/Paatal-lok-amazon-prime.html">
+        <img class="carousel-img" src="/assets/thumbs/series/paatallok.jpg" alt="Paatal Lok">
+      </a>
+    
+      
+      <a href="/2020/11/08/The-Night-Manager-amazon-prime.html">
+        <img class="carousel-img" src="/assets/thumbs/series/thenightmanager.jpg" alt="The Night Manager">
+      </a>
+    
+  </div>
+  <button id="slideRight2" type="button"><span class="fa fa-angle-right"></span></button>
+</div>
 
 <!-- recent posts -->
 
@@ -299,7 +398,25 @@ SimpleJekyllSearch({
 
 
 
+<script>
+  const buttonRight1 = document.getElementById('slideRight1');
+  const buttonLeft1 = document.getElementById('slideLeft1');
+  const buttonRight2 = document.getElementById('slideRight2');
+  const buttonLeft2 = document.getElementById('slideLeft2');
 
+  buttonRight1.onclick = function () {
+    document.getElementById('carousel-body1').scrollLeft += 260;
+  };
+  buttonLeft1.onclick = function () {
+    document.getElementById('carousel-body1').scrollLeft -= 260;
+  };
+  buttonRight2.onclick = function () {
+    document.getElementById('carousel-body2').scrollLeft += 260;
+  };
+  buttonLeft2.onclick = function () {
+    document.getElementById('carousel-body2').scrollLeft -= 260;
+  };
+</script>
       </div>
     </main><footer class="site-footer">
   <div class="wrapper">

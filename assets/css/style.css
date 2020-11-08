@@ -5343,6 +5343,71 @@ input[type=checkbox]:checked ~ #overlay-button .menu-text {
         .theme--light #overlay ul li a:hover {
           color: #f2f6f9; }
 
+.featured {
+  font-size: 1.7rem; }
+
+.carousel-cover {
+  display: flex; }
+  .carousel-cover button {
+    width: 25px;
+    background: none;
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer; }
+  .theme--dark .carousel-cover button:hover {
+    background-color: rgba(218, 228, 237, 0.2); }
+  .theme--light .carousel-cover button:hover {
+    background-color: rgba(30, 34, 39, 0.2); }
+  .theme--dark .carousel-cover button:active {
+    background-color: rgba(218, 228, 237, 0.5); }
+  .theme--light .carousel-cover button:active {
+    background-color: rgba(30, 34, 39, 0.5); }
+  .carousel-cover button > span {
+    font-size: 3rem; }
+    .theme--dark .carousel-cover button > span {
+      color: rgba(218, 228, 237, 0.7); }
+    .theme--light .carousel-cover button > span {
+      color: rgba(30, 34, 39, 0.7); }
+
+.carousel-body {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 10px;
+  padding-left: 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  .carousel-body > a {
+    object-fit: cover;
+    margin-right: 10px; }
+  .carousel-body::-webkit-scrollbar {
+    /* WEbkit (Chrome) */
+    display: none; }
+
+.carousel-img {
+  width: 120px;
+  object-fit: cover;
+  max-width: max-content;
+  filter: saturate(0);
+  transition: 0.3s ease all; }
+  .carousel-img:hover {
+    transform: scale(1.12);
+    filter: saturate(1); }
+  .carousel-img:active {
+    transform: scale(1.12);
+    filter: saturate(1); }
+
 .toggleWrapper {
   display: inline-block;
   float: right;
