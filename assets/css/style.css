@@ -5401,7 +5401,7 @@ input[type=checkbox]:checked ~ #overlay-button .menu-text {
   width: 120px;
   object-fit: cover;
   max-width: max-content;
-  filter: saturate(0);
+  filter: saturate(0.6);
   transition: 0.3s ease all; }
   .carousel-img:hover {
     transform: scale(1.12);
