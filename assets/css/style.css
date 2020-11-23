@@ -4861,18 +4861,21 @@ img {
 @media (max-width: 354px) {
   .card {
     width: 90vw !important; } }
-.pageclip-form {
+.form {
   display: flex;
   flex-direction: column; }
 
-.pageclip-form__submit {
+.form__submit {
   margin-top: 1rem;
   text-transform: uppercase;
   color: #637AFE;
   font-weight: 800; }
 
-.pageclip-form__submit:hover {
+.form__submit:hover {
   color: #F24784; }
+
+.form__submit:active {
+  color: #637AFE; }
 
 input[type="text"], [type="email"], textarea {
   margin-top: 1rem; }
@@ -5410,6 +5413,48 @@ input[type=checkbox]:checked ~ #overlay-button .menu-text {
     transform: scale(1.12);
     filter: saturate(1); }
 
+.spinner {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px; }
+
+.spinner > div {
+  background-color: #666;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s; }
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s; }
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s; }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
 .toggleWrapper {
   display: inline-block;
   float: right;

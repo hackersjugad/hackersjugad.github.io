@@ -162,7 +162,7 @@ function showmenu()
 <div class="author-box">
     
 <img src="/assets/white.svg" class="author-avatar" alt="Avatar" id="avatar"/>
-With hacker's jugad you can watch latest movies and web series online without any ads.  
+Hi there, We provide latest <strong>web-series, movies</strong> online without any ads. You can also request content with <strong><a href="/request">Request  content</a></strong> page. You can list content by clicking on related tag, all tags are  available on the bottom of the site.  
 
 </div><div class="toggleWrapper">
     <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
@@ -269,6 +269,9 @@ SimpleJekyllSearch({
     -webkit-appearance: none;
 }
 button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -285,25 +288,170 @@ button:hover{
 .post-date{
   display: none;
 }
+
+.thankyou_message{
+  display: none;
+}
+#honeypot, .spinner{
+  display: none;
+}
 </style>
-<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+<!-- <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen"> -->
 <div class="post">
   
 
-  <form action="https://send.pageclip.co/b3xd4x67AFF1UhdnWSV9BHAF239HE4j7" class="pageclip-form" method="post">
+  <form class="form" id="gform" action="https://script.google.com/macros/s/AKfycbxWOe0e26XCrf6hV--uQZ_U7EONQK5Rt6dVSKJI/exec" class="pageclip-form" method="post">
     <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-    <input type="text" name="name" placeholder="write here ..." />
-    <input type="email" name="email" placeholder="yourmail@example.com" />
+    <input type="text" name="name" placeholder="name" required />
+    <input type="email" name="email" placeholder="yourmail@example.com" required />
+    <textarea name="message" id="" cols="30" rows="10" required placeholder="Write here..."></textarea>
+    <!-- SPAM detection -->
+    <label class="sr-only">Keep this field blank</label>
+    <input id="honeypot" type="text" name="honeypot" value="" />
     <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-    <button type="submit" class="pageclip-form__submit">
-      <span>Send</span>
+    <button type="submit" class="form__submit">
+      <span class="form-btn">Send</span>
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
     </button>
   </form>
-  <br>
-  <p><a href="/">Go To Home</a></p>
 </div>
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<!-- <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script> -->
 
+
+<div class="thankyou_message">
+  <h1>Thank you !</h1>
+  <h3>Your response has been submitted successfully.</h3>
+</div>
+
+<p><a href="/">Go To Home</a></p>
+
+<script>
+  (function() {
+  // get all data in form and return object
+  function getFormData(form) {
+      var elements = form.elements;
+      var honeypot;
+
+      var fields = Object.keys(elements).filter(function(k) {
+      if (elements[k].name === "honeypot") {
+          honeypot = elements[k].value;
+          return false;
+      }
+      return true;
+      if (validateHuman(data.honeypot)) {
+        return false;
+      }
+      }).map(function(k) {
+      if(elements[k].name !== undefined) {
+          return elements[k].name;
+      // special case for Edge's html collection
+      }else if(elements[k].length > 0){
+          return elements[k].item(0).name;
+      }
+      }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+      });
+
+      var formData = {};
+      fields.forEach(function(name){
+      var element = elements[name];
+      
+      // singular form elements just have one value
+      formData[name] = element.value;
+
+      // when our element has multiple items, get their values
+      if (element.length) {
+          var data = [];
+          for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+              data.push(item.value);
+          }
+          }
+          formData[name] = data.join(', ');
+      }
+      });
+
+      // add form-specific values into the data
+      formData.formDataNameOrder = JSON.stringify(fields);
+      formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+      formData.formGoogleSendEmail
+      = form.dataset.email || ""; // no email by default
+
+      return {data: formData, honeypot: honeypot};
+  }
+
+  function handleFormSubmit(event) {  // handles form submit without any jquery
+      event.preventDefault();           // we are submitting via xhr below
+
+      var formBtn = document.querySelector(".form-btn");
+      var spinner = document.querySelector(".spinner");
+      formBtn.style.display = "none";
+      spinner.style.display = "block";
+
+      var form = event.target;
+      var formData = getFormData(form);
+      var data = formData.data;
+
+      // If a honeypot field is filled, assume it was done so by a spam bot.
+      if (formData.honeypot) {
+      return false;
+      }
+
+      disableAllButtons(form);
+      var url = form.action;
+      // var url = "https://script.google.com/macros/s/AKfycbx3HpT_J7T0BTJpnuoHjHuP2RW57GPzXkosFr4t/exec";
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      // xhr.withCredentials = true;
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+          form.reset();
+          var formElements = document.querySelector(".form")
+          if (formElements) {
+              formElements.style.display = "none"; // hide form
+          }
+          var thankYouMessage = document.querySelector(".thankyou_message");
+          if (thankYouMessage) {
+              thankYouMessage.style.display = "block";
+          }
+          }
+      };
+      xhr.onerror = (error) => {
+          alert("Error, Please try again");
+          location.reload();
+      }
+      // url encode form data for sending as post data
+      var encoded = Object.keys(data).map(function(k) {
+          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+      }).join('&');
+      xhr.send(encoded);
+  }
+  
+  function loaded() {
+      // bind to the submit event of our form
+      var forms = document.querySelectorAll("form#gform");
+      for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+      }
+  };
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+      var buttons = form.querySelectorAll("button");
+      for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+      }
+  }
+  })();
+</script>
 </div>
 
 
