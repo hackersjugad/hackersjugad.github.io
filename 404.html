@@ -45,7 +45,20 @@
     });
   </script>
   <!-- Push Notification script End -->
-  <!-- PWA service worker -->
+  <!-- PWA service worker --><script> 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+  </script>
+  
   <!-- PWA service worker end -->
 </head>
 <body><div class="site-header">
