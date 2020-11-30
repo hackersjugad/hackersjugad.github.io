@@ -20,11 +20,17 @@
 
 const cacheName = 'pwa-conf-v1';
 const staticAssets = [
-    './',
-    './index.html',
-    './assets/search-script.js',
-    './assets/css/styles.css',
-    './assets/'
+    '/',
+    '/index.html',
+    '/credits.html',
+    '/404.html',
+    '/books.html',
+    '/movies.html',
+    '/series.html',
+    '/search.json',
+    '/assets/search-script.js',
+    '/assets/css/styles.css',
+    '/assets/'
 ];
 
 
