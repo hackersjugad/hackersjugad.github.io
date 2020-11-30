@@ -19,7 +19,11 @@
 <script type="application/ld+json">
 {"@type":"WebPage","headline":"Hacker’s Jugad","author":{"@type":"Person","name":"hackers jugad"},"description":"Hi there, We provide latest web-series, movies online without any ads. You can also request content with Request content page. You can list content by clicking on related tag, all tags are available on the bottom of the site.","url":"https://hackersjugad.tech/tag/it-books/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/style.css">
+<meta name="apple-mobile-web-app-status-bar" content="#1E2227"> 
+  <meta name="theme-color" content="#1E2227"> 
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/black.svg"/><!-- Global site tag (gtag.js) - Google Analytics -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180273550-1" ></script>
@@ -41,7 +45,28 @@
     });
   </script>
   <!-- Push Notification script End -->
+  <!-- PWA service worker -->
+  
+  <!-- <script> 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+  </script> -->
+  <script>
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+  </script>
+  <!-- PWA service worker end -->
 </head>
 <body><div class="site-header">
   <div class="wrapper">
