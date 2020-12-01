@@ -16,32 +16,40 @@
 //   ]
 
 // servie worker
+const cacheName = 'pwa-conf-v1.28';
+const staticCacheName = [
+  '/credits.html',
+  '/404.html',
+];
 
-
-const staticCacheName = 'pwa-conf-v1.01';
 const staticAssets = [
-  '/',
   '/index.html',
   '/credits.html',
   '/404.html',
   '/books.html',
   '/movies.html',
   '/series.html',
+  '/offline.html',
   '/search.json',
-  '/assets/search-script.js',
-  '/assets/css/styles.css',
-  '/assets/'
 ];
 
 
-self.addEventListener('install', async event => {
-  console.log('install event');
-  const cache = await caches.open(cacheName);
-  await cache.addAll(staticAssets);
-});
+// self.addEventListener('install', async event => {
+//   // console.log('install event');
+//   const cache = await caches.open(cacheName);
+//   await cache.addAll(staticAssets);
+// });
+
+self.addEventListener('install', function (event) {
+  event.waitUntil(
+    caches.open(cacheName).then(function (cache) {
+      return cache.addAll(staticAssets);
+    })
+  );
+});;
 
 self.addEventListener('fetch', async event => {
-  console.log('fetch event');
+  // console.log('fetch event');
   const req = event.request;
 
   if (/.*(json)$/.test(req.url)) {
@@ -64,8 +72,8 @@ async function networkFirst(req) {
     cache.put(req, fresh.clone());
     return fresh;
   } catch (e) {
-    const cachedResponse = await cache.match(req);
-    return cachedResponse;
+    // const cachedResponse = await cache.match(req);
+    return caches.match('/offline.html');
   }
 }
 

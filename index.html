@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Hacker’s Jugad | Hi there, We provide latest web-series, movies online without any ads. You can also request content with Request content page. You can list content by clicking on related tag, all tags are available on the bottom of the site.</title>
+<title>Home | Hacker’s Jugad</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Hacker’s Jugad" />
+<meta property="og:title" content="Home" />
 <meta name="author" content="hackers jugad" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hi there, We provide latest web-series, movies online without any ads. You can also request content with Request content page. You can list content by clicking on related tag, all tags are available on the bottom of the site." />
@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="Hacker’s Jugad" />
 <link rel="next" href="https://hackersjugad.tech/blog/page2/" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Hacker’s Jugad" />
+<meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@type":"WebSite","headline":"Hacker’s Jugad","author":{"@type":"Person","name":"hackers jugad"},"description":"Hi there, We provide latest web-series, movies online without any ads. You can also request content with Request content page. You can list content by clicking on related tag, all tags are available on the bottom of the site.","url":"https://hackersjugad.tech/","name":"Hacker’s Jugad","@context":"https://schema.org"}</script>
+{"@type":"WebSite","headline":"Home","author":{"@type":"Person","name":"hackers jugad"},"description":"Hi there, We provide latest web-series, movies online without any ads. You can also request content with Request content page. You can list content by clicking on related tag, all tags are available on the bottom of the site.","url":"https://hackersjugad.tech/","name":"Hacker’s Jugad","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <meta name="apple-mobile-web-app-status-bar" content="#1E2227"> 
   <meta name="theme-color" content="#1E2227"> 
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="/assets/icon-192.png">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/black.svg"/><!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,19 +46,28 @@
     });
   </script>
   <!-- Push Notification script End -->
-  <!-- PWA service worker --><!-- <script> 
+  <!-- PWA service worker --><script> 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      navigator.serviceWorker.register("/sw.js").then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        loadOfflinePage();
       }, function(err) {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
       });
     });
   }
-  </script> -->
+  function loadOfflinePage(){
+      const url = '/offline.html';
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.responseType = 'text/html; charset=utf-8';
+      // xhr.onload = () => console.log(xhr.response);
+      xhr.send();
+  }
+  </script>
   
   <!-- PWA service worker end -->
 </head>
