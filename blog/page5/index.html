@@ -48,31 +48,62 @@
   </script>
   <!-- Push Notification script End -->
   <!-- PWA service worker --><script> 
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register("/sw.js").then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        loadOfflinePage();
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-      });
+  window.addEventListener('DOMContentLoaded', (event) => {
+    let newWorker;
+    document.getElementById('notification').addEventListener('click', function(){
+      newWorker.postMessage({ action: 'skipWaiting' });
     });
-  }
-  function loadOfflinePage(){
-      const url = '/offline.html';
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', url);
-      xhr.responseType = 'text/html; charset=utf-8';
-      // xhr.onload = () => console.log(xhr.response);
-      xhr.send();
-  }
-  </script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register("/sw.js").then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          registration.addEventListener('updatefound', () => {
+            // An updated service worker has appeared in reg.installing!
+            newWorker = registration.installing;
+            newWorker.addEventListener('statechange', () => {
+              console.log("here you are !");
+              // Has service worker state changed?
+              switch (newWorker.state) {
+                case 'installed':
+                  // There is a new service worker available, show the notification
+                  if (navigator.serviceWorker.controller) {
+                    let notification = document.getElementById('notification');
+                    notification.className = 'notify';
+                  }
+                  break;
+              }
+            });
+          // loadOfflinePage();
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      });
+    }
+    // function loadOfflinePage(){
+    //     const url = '/offline.html';
+    //     const xhr = new XMLHttpRequest();
+    //     xhr.open('GET', url);
+    //     xhr.responseType = 'text/html; charset=utf-8';
+    //     // xhr.onload = () => console.log(xhr.response);
+    //     xhr.send();
+    // }
+
+    let refreshing;
+    // The event listener that is fired when the service worker updates
+    // Here we reload the page
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (refreshing) return;
+      window.location.reload();
+      refreshing = true;
+    });
+  });
+    </script>
   
   <!-- PWA service worker end -->
-</head>
-<body><div class="site-header">
+</head><body><div class="site-header">
   <div class="wrapper">
     <a class="site-title" rel="author" href="/">Hacker&#39;s Jugad<b class="command_prompt"></b><b class="blinking_cursor">_</b></a>
     <div class="social_links">
@@ -737,6 +768,11 @@ SimpleJekyllSearch({
   <div class="wrapper">
     <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a></i>
       
+    </div>
+  </div>
+  <div class="notification" id="notification">
+    <div class="wrapper">
+      <p>App is updated to see changes please click here or restart app.</p>
     </div>
   </div>
 </footer>
