@@ -177,7 +177,7 @@ Hi there, We provide latest <strong>web-series, movies</strong> online without a
         <span class="star star--6"></span>
     </label>
 </div>
-<script type="text/javascript">
+<script> 
 const theme = localStorage.getItem('theme');
 
 if (theme === "light") {
@@ -229,20 +229,24 @@ function modeSwitcher() {
 }
 </script><!-- Html Elements for Search -->
 <div id="search-container">
+
 <input type="text" id="search-input" placeholder="search...">
+
 <ul id="results-container" class="search-result"></ul>
 </div>
 
 
 <!-- Script pointing to search-script.js -->
-<script src='/assets/js/search-script.js' type="text/javascript"></script>
+<script src='/assets/js/search-script.js' ></script>
 
 <!-- Configuration -->
 <script>
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
+  
   json: '/search.json'
+  
 })
 </script>
 
@@ -259,16 +263,19 @@ SimpleJekyllSearch({
       </div>
     </main><footer class="site-footer">
   <div class="wrapper">
-    <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a></i>
+    <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a>
       
     </div>
   </div>
-  <div class="notification" id="notification">
+</footer>
+<div class="my-notification" id="notification">
+  <div class="notification" id="notify">
     <div class="wrapper">
       <p>App is updated to see changes please click here or restart app.</p>
     </div>
   </div>
-</footer>
+</div>
+
 
 
 <script>

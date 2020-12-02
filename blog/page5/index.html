@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Page 5 of 7 for Home | Hacker’s Jugad</title>
+<title>Page 5 of 8 for Home | Hacker’s Jugad</title>
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Home" />
 <meta name="author" content="hackers jugad" />
@@ -50,7 +50,7 @@
   <!-- PWA service worker --><script> 
   window.addEventListener('DOMContentLoaded', (event) => {
     let newWorker;
-    document.getElementById('notification').addEventListener('click', function(){
+    document.getElementById('notify').addEventListener('click', function(){
       newWorker.postMessage({ action: 'skipWaiting' });
     });
     if ('serviceWorker' in navigator) {
@@ -62,19 +62,18 @@
             // An updated service worker has appeared in reg.installing!
             newWorker = registration.installing;
             newWorker.addEventListener('statechange', () => {
-              console.log("here you are !");
+              // console.log("here you are !");
               // Has service worker state changed?
               switch (newWorker.state) {
                 case 'installed':
                   // There is a new service worker available, show the notification
                   if (navigator.serviceWorker.controller) {
                     let notification = document.getElementById('notification');
-                    notification.className = 'notify';
+                    notification.classList.add('notify');
                   }
                   break;
               }
             });
-          // loadOfflinePage();
           }, function(err) {
             // registration failed :(
             console.log('ServiceWorker registration failed: ', err);
@@ -82,15 +81,6 @@
         });
       });
     }
-    // function loadOfflinePage(){
-    //     const url = '/offline.html';
-    //     const xhr = new XMLHttpRequest();
-    //     xhr.open('GET', url);
-    //     xhr.responseType = 'text/html; charset=utf-8';
-    //     // xhr.onload = () => console.log(xhr.response);
-    //     xhr.send();
-    // }
-
     let refreshing;
     // The event listener that is fired when the service worker updates
     // Here we reload the page
@@ -233,7 +223,7 @@ Hi there, We provide latest <strong>web-series, movies</strong> online without a
         <span class="star star--6"></span>
     </label>
 </div>
-<script type="text/javascript">
+<script> 
 const theme = localStorage.getItem('theme');
 
 if (theme === "light") {
@@ -285,20 +275,24 @@ function modeSwitcher() {
 }
 </script><!-- Html Elements for Search -->
 <div id="search-container">
+
 <input type="text" id="search-input" placeholder="search...">
+
 <ul id="results-container" class="search-result"></ul>
 </div>
 
 
 <!-- Script pointing to search-script.js -->
-<script src='/assets/js/search-script.js' type="text/javascript"></script>
+<script src='/assets/js/search-script.js' ></script>
 
 <!-- Configuration -->
 <script>
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
+  
   json: '/search.json'
+  
 })
 </script>
 
@@ -311,57 +305,57 @@ SimpleJekyllSearch({
     
       
       <a href="/2020/11/26/Anwar-Ka-Ajab-Kissa-erosnow-watch-online.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/anwarkaajabkissa.jpg" alt="Anwar Ka Ajab Kissa" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/anwarkaajabkissa.jpg" alt="Anwar Ka Ajab Kissa" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/13/Ludo-netflix.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/ludo.jpg" alt="Ludo" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/ludo.jpg" alt="Ludo" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/29/21_Bridges_2019_Netflix_movie.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/21bridges.jpg" alt="21 Bridges" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/21bridges.jpg" alt="21 Bridges" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/29/Jingle_Jangle_a_Christmas_Journey_2020_netflix_movie.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/jinglejungle.jpg" alt="Jingle Jungle" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/jinglejungle.jpg" alt="Jingle Jungle" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/29/The_Hole_In_The_Ground_2019_Netflix_movie.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/theholeintheground.jpg" alt="The Hole In The Ground" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/theholeintheground.jpg" alt="The Hole In The Ground" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/26/Unhinged-2020-amazon-prime-watch-online.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/unhinged.jpg" alt="Unhinged" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/unhinged.jpg" alt="Unhinged" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/09/Laxmi-hotstar.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/laxmii.jpg" alt="Laxmii" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/laxmii.jpg" alt="Laxmii" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/26/Tumhari-sulu-2017-watch-online.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/tumharisulu.jpg" alt="Tumhari Sulu" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/tumharisulu.jpg" alt="Tumhari Sulu" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/13/Chhalang-amazon-prime.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/chhalang.jpg" alt="Chhalang" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/chhalang.jpg" alt="Chhalang" width="120" height="177"> 
       </a>
     
       
       <a href="/2020/11/17/Evil-Eye-Amazon-prime.html">
-        <img class="carousel-img" src="/assets/thumbs/movies/evileye.jpg" alt="Evil Eye" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/evileye.jpg" alt="Evil Eye" width="120" height="177"> 
       </a>
     
       
       <a href="/movies">
-        <img class="carousel-img" src="/assets/thumbs/movies/allmovies.jpg" alt="All Movies" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/movies/allmovies.jpg" alt="All Movies" width="120" height="177"> 
       </a>
     
   </div>
@@ -376,57 +370,57 @@ SimpleJekyllSearch({
     
       
       <a href="/2020/11/30/Naxalbari_2020_zee5_webseries.html">
-        <img class="carousel-img" src="/assets/thumbs/series/naxalbari.jpg" alt="Naxalbari" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/naxalbari.jpg" alt="Naxalbari" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/27/Dark_7_White_alt_balaji_and_zee5_webseries.html">
-        <img class="carousel-img" src="/assets/thumbs/series/dark7white.jpg" alt="Dark 7 White" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/dark7white.jpg" alt="Dark 7 White" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/26/The-Queens-Gambit-Netflix-watch-online.html">
-        <img class="carousel-img" src="/assets/thumbs/series/thequeensgambit.jpg" alt="The Queen’s Gambit" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/thequeensgambit.jpg" alt="The Queen’s Gambit" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/29/Beehad_ka_baghi_MX_player_web_series.html">
-        <img class="carousel-img" src="/assets/thumbs/series/beehadkabaghi.jpg" alt="Beehad Ka Baghi" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/beehadkabaghi.jpg" alt="Beehad Ka Baghi" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/29/Paper-season_2-Ullu-webseries.html">
-        <img class="carousel-img" src="/assets/thumbs/series/paper2.jpg" alt="Paper Season 2" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/paper2.jpg" alt="Paper Season 2" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/20/Bicchoo-Ka-Khel-Alt-balaji-web-series.html">
-        <img class="carousel-img" src="/assets/thumbs/series/bicchookakhel.jpg" alt="Bicchoo ka khel" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/bicchookakhel.jpg" alt="Bicchoo ka khel" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/13/Mum-Bhai-zee5.html">
-        <img class="carousel-img" src="/assets/thumbs/series/mumbhai.jpg" alt="Mum Bhai" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/mumbhai.jpg" alt="Mum Bhai" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/27/Love_ka_panga_Hungama_webseries_2020.html">
-        <img class="carousel-img" src="/assets/thumbs/series/lovekapanga.jpg" alt="Love Ka Panga" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/lovekapanga.jpg" alt="Love Ka Panga" width="120" height="177">
       </a>
     
       
       <a href="/2020/11/21/Mismetched-Netflix-web-series-online.html">
-        <img class="carousel-img" src="/assets/thumbs/series/mismatched.jpg" alt="Mismatched" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/mismatched.jpg" alt="Mismatched" width="120" height="177">
       </a>
     
       
       <a href="/2020/10/23/Mirzapur-Season2-Online-Episode-streamed-on-Amazon-Prime-in-720p.html">
-        <img class="carousel-img" src="/assets/thumbs/series/mirzapurs2.jpg" alt="Mirzapur S2" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/mirzapurs2.jpg" alt="Mirzapur S2" width="120" height="177">
       </a>
     
       
       <a href="/series">
-        <img class="carousel-img" src="/assets/thumbs/series/allseries.jpg" alt="All Web Series" width="120px" height="177px">
+        <img class="carousel-img" src="/assets/thumbs/series/allseries.jpg" alt="All Web Series" width="120" height="177">
       </a>
     
   </div>
@@ -438,6 +432,156 @@ SimpleJekyllSearch({
 
 <h1>Recent Posts</h1>
     <div class="post-links">
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/16/spell-2018-Crush-Pictures.html" class="post-link">Spell 2018 Crush Pictures</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/crushpictures/">crushpictures</a>
+                
+                <a class="tag" href="/tag/comedy/">comedy</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+                <a class="tag" href="/tag/thriller/">thriller</a>
+                
+            </div>
+            
+            
+              Nov 16, 2020
+            
+            
+          </div>
+        </div>
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/13/Mum-Bhai-zee5.html" class="post-link">Mum Bhai (2020) zee5</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/zee5/">zee5</a>
+                
+                <a class="tag" href="/tag/action/">action</a>
+                
+                <a class="tag" href="/tag/crime/">crime</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+                <a class="tag" href="/tag/thriller/">thriller</a>
+                
+            </div>
+            
+            
+              Nov 13, 2020
+            
+            
+          </div>
+        </div>
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/13/Ludo-netflix.html" class="post-link">Ludo (2020) netflix</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/netflix/">netflix</a>
+                
+                <a class="tag" href="/tag/action/">action</a>
+                
+                <a class="tag" href="/tag/comedy/">comedy</a>
+                
+                <a class="tag" href="/tag/crime/">crime</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+            </div>
+            
+            
+              Nov 13, 2020
+            
+            
+          </div>
+        </div>
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/13/Enola-Holmes-Netflix.html" class="post-link">Enola Holmes (2020) netflix</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/netflix/">netflix</a>
+                
+                <a class="tag" href="/tag/action/">action</a>
+                
+                <a class="tag" href="/tag/adventure/">adventure</a>
+                
+                <a class="tag" href="/tag/crime/">crime</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+                <a class="tag" href="/tag/mystery/">mystery</a>
+                
+            </div>
+            
+            
+              Nov 13, 2020
+            
+            
+          </div>
+        </div>
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/13/Chhalang-amazon-prime.html" class="post-link">chhalaang (2020) amazon prime</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/amazon-prime/">amazon-prime</a>
+                
+                <a class="tag" href="/tag/comedy/">comedy</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+            </div>
+            
+            
+              Nov 13, 2020
+            
+            
+          </div>
+        </div>
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/12/The-New-Mutants-Marvel.html" class="post-link">The New Mutants (2020) Marvel</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/marvel/">marvel</a>
+                
+                <a class="tag" href="/tag/action/">action</a>
+                
+                <a class="tag" href="/tag/horror/">horror</a>
+                
+                <a class="tag" href="/tag/sci-fi/">sci-fi</a>
+                
+            </div>
+            
+            
+              Nov 12, 2020
+            
+            
+          </div>
+        </div>
       
         <div class="post-link-wrapper">
           <a href="/2020/11/10/Gandii-Baat-Alt-balaji.html" class="post-link">Gandii Baat seasion 5 Alt Balaji</a>
@@ -535,158 +679,6 @@ SimpleJekyllSearch({
           </div>
         </div>
       
-        <div class="post-link-wrapper">
-          <a href="/2020/11/09/Laxmi-hotstar.html" class="post-link">Laxmii (2020) Hotstar</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/hotstar/">hotstar</a>
-                
-                <a class="tag" href="/tag/action/">action</a>
-                
-                <a class="tag" href="/tag/comedy/">comedy</a>
-                
-                <a class="tag" href="/tag/horror/">horror</a>
-                
-            </div>
-            
-            
-              Nov 9, 2020
-            
-            
-          </div>
-        </div>
-      
-        <div class="post-link-wrapper">
-          <a href="/2020/11/08/The-Night-Manager-amazon-prime.html" class="post-link">The Night Manager Amazon Prime</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/amazon-prime/">amazon-prime</a>
-                
-                <a class="tag" href="/tag/crime/">crime</a>
-                
-                <a class="tag" href="/tag/drama/">drama</a>
-                
-                <a class="tag" href="/tag/mystery/">mystery</a>
-                
-                <a class="tag" href="/tag/thriller/">thriller</a>
-                
-            </div>
-            
-            
-              Nov 8, 2020
-            
-            
-          </div>
-        </div>
-      
-        <div class="post-link-wrapper">
-          <a href="/2020/11/08/Paatal-lok-amazon-prime.html" class="post-link">Paatal Lok Amazon Prime</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/amazon-prime/">amazon-prime</a>
-                
-                <a class="tag" href="/tag/crime/">crime</a>
-                
-                <a class="tag" href="/tag/drama/">drama</a>
-                
-                <a class="tag" href="/tag/thriller/">thriller</a>
-                
-            </div>
-            
-            
-              Nov 8, 2020
-            
-            
-          </div>
-        </div>
-      
-        <div class="post-link-wrapper">
-          <a href="/2020/11/08/Shakuntala-Devi-amazon-prime.html" class="post-link">Shakuntala Devi Amazon Prime</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/amazon-prime/">amazon-prime</a>
-                
-                <a class="tag" href="/tag/drama/">drama</a>
-                
-            </div>
-            
-            
-              Nov 8, 2020
-            
-            
-          </div>
-        </div>
-      
-        <div class="post-link-wrapper">
-          <a href="/2020/11/07/Over-The-moon-netflix.html" class="post-link">Over The Moon Netflix</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/netflix/">netflix</a>
-                
-                <a class="tag" href="/tag/animation/">animation</a>
-                
-                <a class="tag" href="/tag/adventure/">adventure</a>
-                
-                <a class="tag" href="/tag/comedy/">comedy</a>
-                
-                <a class="tag" href="/tag/family/">family</a>
-                
-                <a class="tag" href="/tag/fantasy/">fantasy</a>
-                
-                <a class="tag" href="/tag/musical/">musical</a>
-                
-                <a class="tag" href="/tag/sci-fi/">sci-fi</a>
-                
-            </div>
-            
-            
-              Nov 7, 2020
-            
-            
-          </div>
-        </div>
-      
-        <div class="post-link-wrapper">
-          <a href="/2020/11/07/Class-of-83-netflix.html" class="post-link">Class of '83 Netflix</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/netflix/">netflix</a>
-                
-                <a class="tag" href="/tag/action/">action</a>
-                
-                <a class="tag" href="/tag/crime/">crime</a>
-                
-                <a class="tag" href="/tag/drama/">drama</a>
-                
-                <a class="tag" href="/tag/thriller/">thriller</a>
-                
-            </div>
-            
-            
-              Nov 7, 2020
-            
-            
-          </div>
-        </div>
-      
     </div>
 
     <!-- pagination -->
@@ -725,6 +717,10 @@ SimpleJekyllSearch({
       <a href="/blog/page7/">7</a>
     
   
+    
+      <a href="/blog/page8/">8</a>
+    
+  
 
   
     <a href="/blog/page6/"><i class="fas fa-chevron-right"></i></a>
@@ -738,7 +734,7 @@ SimpleJekyllSearch({
 
   
   <h2>all tags</h2>
-  <div class="tag-cloud"><a href="/tag/action/" class="set-3">action</a> <a href="/tag/adventure/" class="set-1">adventure</a> <a href="/tag/alt-balaji/" class="set-1">alt-balaji</a> <a href="/tag/amazon-prime/" class="set-1">amazon-prime</a> <a href="/tag/animation/" class="set-1">animation</a> <a href="/tag/biography/" class="set-1">biography</a> <a href="/tag/books/" class="set-1">books</a> <a href="/tag/comedy/" class="set-2">comedy</a> <a href="/tag/crime/" class="set-3">crime</a> <a href="/tag/crushpictures/" class="set-1">crushpictures</a> <a href="/tag/disney/" class="set-1">disney</a> <a href="/tag/download/" class="set-1">download</a> <a href="/tag/drama/" class="set-5">drama</a> <a href="/tag/eros-now/" class="set-1">eros-now</a> <a href="/tag/erosnow/" class="set-1">erosnow</a> <a href="/tag/family/" class="set-1">family</a> <a href="/tag/fantasy/" class="set-1">fantasy</a> <a href="/tag/hacking-books/" class="set-1">hacking-books</a> <a href="/tag/history/" class="set-1">history</a> <a href="/tag/horror/" class="set-1">horror</a> <a href="/tag/hotstar/" class="set-1">hotstar</a> <a href="/tag/hungama/" class="set-1">hungama</a> <a href="/tag/information-technology/" class="set-1">information-technology</a> <a href="/tag/it-books/" class="set-1">it-books</a> <a href="/tag/marvel/" class="set-1">marvel</a> <a href="/tag/mirzapur/" class="set-1">mirzapur</a> <a href="/tag/musical/" class="set-1">musical</a> <a href="/tag/mxplayer/" class="set-1">mxplayer</a> <a href="/tag/mystery/" class="set-1">mystery</a> <a href="/tag/netflix/" class="set-2">netflix</a> <a href="/tag/paramount/" class="set-1">paramount</a> <a href="/tag/romance/" class="set-1">romance</a> <a href="/tag/sci-fi/" class="set-1">sci-fi</a> <a href="/tag/sonyliv/" class="set-1">sonyliv</a> <a href="/tag/sport/" class="set-1">sport</a> <a href="/tag/thriller/" class="set-4">thriller</a> <a href="/tag/tseries/" class="set-1">tseries</a> <a href="/tag/ullu/" class="set-1">ullu</a> <a href="/tag/voot/" class="set-1">voot</a> <a href="/tag/zee5/" class="set-1">zee5</a></div>
+  <div class="tag-cloud"><a href="/tag/action/" class="set-3">action</a> <a href="/tag/adventure/" class="set-1">adventure</a> <a href="/tag/alt-balaji/" class="set-1">alt-balaji</a> <a href="/tag/amazon-prime/" class="set-1">amazon-prime</a> <a href="/tag/animation/" class="set-1">animation</a> <a href="/tag/biography/" class="set-1">biography</a> <a href="/tag/books/" class="set-1">books</a> <a href="/tag/comedy/" class="set-2">comedy</a> <a href="/tag/crime/" class="set-3">crime</a> <a href="/tag/crushpictures/" class="set-1">crushpictures</a> <a href="/tag/disney/" class="set-1">disney</a> <a href="/tag/download/" class="set-1">download</a> <a href="/tag/drama/" class="set-5">drama</a> <a href="/tag/eros-now/" class="set-1">eros-now</a> <a href="/tag/erosnow/" class="set-1">erosnow</a> <a href="/tag/family/" class="set-1">family</a> <a href="/tag/fantasy/" class="set-1">fantasy</a> <a href="/tag/hacking-books/" class="set-1">hacking-books</a> <a href="/tag/history/" class="set-1">history</a> <a href="/tag/horror/" class="set-1">horror</a> <a href="/tag/hotstar/" class="set-1">hotstar</a> <a href="/tag/hungama/" class="set-1">hungama</a> <a href="/tag/information-technology/" class="set-1">information-technology</a> <a href="/tag/it-books/" class="set-1">it-books</a> <a href="/tag/marvel/" class="set-1">marvel</a> <a href="/tag/mirzapur/" class="set-1">mirzapur</a> <a href="/tag/musical/" class="set-1">musical</a> <a href="/tag/mxplayer/" class="set-1">mxplayer</a> <a href="/tag/mystery/" class="set-1">mystery</a> <a href="/tag/netflix/" class="set-2">netflix</a> <a href="/tag/paramount/" class="set-1">paramount</a> <a href="/tag/romance/" class="set-1">romance</a> <a href="/tag/sci-fi/" class="set-1">sci-fi</a> <a href="/tag/sonyliv/" class="set-1">sonyliv</a> <a href="/tag/sport/" class="set-1">sport</a> <a href="/tag/thriller/" class="set-3">thriller</a> <a href="/tag/tseries/" class="set-1">tseries</a> <a href="/tag/ullu/" class="set-1">ullu</a> <a href="/tag/voot/" class="set-1">voot</a> <a href="/tag/zee5/" class="set-1">zee5</a></div>
   
 
 
@@ -766,16 +762,19 @@ SimpleJekyllSearch({
       </div>
     </main><footer class="site-footer">
   <div class="wrapper">
-    <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a></i>
+    <div class="credits">&copy; hacker's_jugad <a href="/credits"> credits</a>
       
     </div>
   </div>
-  <div class="notification" id="notification">
+</footer>
+<div class="my-notification" id="notification">
+  <div class="notification" id="notify">
     <div class="wrapper">
       <p>App is updated to see changes please click here or restart app.</p>
     </div>
   </div>
-</footer>
+</div>
+
 
 
 <script>
