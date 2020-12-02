@@ -16,13 +16,14 @@
 // ]
 
 // servie worker
-const cache_Name = "pwa-conf-v1.045";
+const cache_Name = "pwa-conf-v1.046";
 // const staticCacheName = [
 //   '/credits.html',
 //   '/404.html',
 // ];
 
 const staticAssets = [
+  '/',
   '/index.html',
   '/credits.html',
   '/404.html',
