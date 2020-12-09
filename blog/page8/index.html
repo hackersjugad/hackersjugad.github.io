@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Page 8 of 9 for Home | Hacker’s Jugad</title>
+<title>Page 8 of 10 for Home | Hacker’s Jugad</title>
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Home" />
 <meta name="author" content="hackers jugad" />
@@ -48,38 +48,38 @@
   </script> -->
   <!-- Push Notification script End -->
   <!-- PWA service worker --><script> 
-  window.addEventListener('DOMContentLoaded', (event) => {
-    let newWorker;
-    document.getElementById('notify').addEventListener('click', function(){
-      newWorker.postMessage({ action: 'skipWaiting' });
-    });
+  // window.addEventListener('DOMContentLoaded', (event) => {
+  //   let newWorker;
+  //   document.getElementById('notify').addEventListener('click', function(){
+  //     newWorker.postMessage({ action: 'skipWaiting' });
+  //   });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register("/sw.js").then(function(registration) {
           // Registration was successful
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          registration.addEventListener('updatefound', () => {
-            // An updated service worker has appeared in reg.installing!
-            newWorker = registration.installing;
-            newWorker.addEventListener('statechange', () => {
-              // console.log("here you are !");
-              // Has service worker state changed?
-              switch (newWorker.state) {
-                case 'installed':
-                  // There is a new service worker available, show the notification
-                  if (navigator.serviceWorker.controller) {
-                    let notification = document.getElementById('notification');
-                    notification.classList.add('notify');
-                  }
-                  break;
-              }
-            });
+          // registration.addEventListener('updatefound', () => {
+          //   // An updated service worker has appeared in reg.installing!
+          //   newWorker = registration.installing;
+          //   newWorker.addEventListener('statechange', () => {
+          //     // console.log("here you are !");
+          //     // Has service worker state changed?
+          //     switch (newWorker.state) {
+          //       case 'installed':
+          //         // There is a new service worker available, show the notification
+          //         if (navigator.serviceWorker.controller) {
+          //           let notification = document.getElementById('notification');
+          //           notification.classList.add('notify');
+          //         }
+          //         break;
+          //     }
+          //   });
           }, function(err) {
             // registration failed :(
             console.log('ServiceWorker registration failed: ', err);
           });
         });
-      });
+    //   });
     }
     let refreshing;
     // The event listener that is fired when the service worker updates
@@ -89,7 +89,7 @@
       window.location.reload();
       refreshing = true;
     });
-  });
+  // });
     </script>
   
   <!-- PWA service worker end -->
@@ -318,6 +318,11 @@ SimpleJekyllSearch({
       </a>
     
       
+      <a href="/2020/12/09/GodMothered_2020_dosney_Movie.html" title="GodMothered">
+        <img class="carousel-img" src="/assets/thumbs/movies/godmothered.jpg" alt="GodMothered" width="120" height="177"> 
+      </a>
+    
+      
       <a href="/2020/12/06/fukrey_boyzzz_space_mein_fukrapanti_2020-netflix.html" title="Fukrey Boyzzz: Space Mein Fukrapanti">
         <img class="carousel-img" src="/assets/thumbs/movies/fukreyboyzzzspacemeinfukrapanti.jpg" alt="Fukrey Boyzzz: Space Mein Fukrapanti" width="120" height="177"> 
       </a>
@@ -355,11 +360,6 @@ SimpleJekyllSearch({
       
       <a href="/2020/11/09/Laxmi-hotstar.html" title="Laxmii">
         <img class="carousel-img" src="/assets/thumbs/movies/laxmii.jpg" alt="Laxmii" width="120" height="177"> 
-      </a>
-    
-      
-      <a href="/2020/11/13/Chhalang-amazon-prime.html" title="Chhalang">
-        <img class="carousel-img" src="/assets/thumbs/movies/chhalang.jpg" alt="Chhalang" width="120" height="177"> 
       </a>
     
       
@@ -441,6 +441,56 @@ SimpleJekyllSearch({
 
 <h1>Recent Posts</h1>
     <div class="post-links">
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/08/The-Night-Manager-amazon-prime.html" class="post-link">The Night Manager Amazon Prime</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/amazon-prime/">amazon-prime</a>
+                
+                <a class="tag" href="/tag/crime/">crime</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+                <a class="tag" href="/tag/mystery/">mystery</a>
+                
+                <a class="tag" href="/tag/thriller/">thriller</a>
+                
+            </div>
+            
+            
+              Nov 8, 2020
+            
+            
+          </div>
+        </div>
+      
+        <div class="post-link-wrapper">
+          <a href="/2020/11/08/Paatal-lok-amazon-prime.html" class="post-link">Paatal Lok Amazon Prime</a>
+          <div class="post-meta">
+
+            
+            <div class="post-tags">
+                
+                <a class="tag" href="/tag/amazon-prime/">amazon-prime</a>
+                
+                <a class="tag" href="/tag/crime/">crime</a>
+                
+                <a class="tag" href="/tag/drama/">drama</a>
+                
+                <a class="tag" href="/tag/thriller/">thriller</a>
+                
+            </div>
+            
+            
+              Nov 8, 2020
+            
+            
+          </div>
+        </div>
       
         <div class="post-link-wrapper">
           <a href="/2020/11/08/Shakuntala-Devi-amazon-prime.html" class="post-link">Shakuntala Devi Amazon Prime</a>
@@ -638,60 +688,6 @@ SimpleJekyllSearch({
           </div>
         </div>
       
-        <div class="post-link-wrapper">
-          <a href="/2020/11/04/Hercules-disney-(1997).html" class="post-link">Hercules (1997) Disney</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/disney/">disney</a>
-                
-                <a class="tag" href="/tag/animation/">animation</a>
-                
-                <a class="tag" href="/tag/adventure/">adventure</a>
-                
-                <a class="tag" href="/tag/comedy/">comedy</a>
-                
-                <a class="tag" href="/tag/family/">family</a>
-                
-                <a class="tag" href="/tag/fantasy/">fantasy</a>
-                
-                <a class="tag" href="/tag/musical/">musical</a>
-                
-                <a class="tag" href="/tag/romance/">romance</a>
-                
-            </div>
-            
-            
-              Nov 4, 2020
-            
-            
-          </div>
-        </div>
-      
-        <div class="post-link-wrapper">
-          <a href="/2020/11/03/Taish-Zee5.html" class="post-link">Taish Zee5</a>
-          <div class="post-meta">
-
-            
-            <div class="post-tags">
-                
-                <a class="tag" href="/tag/zee5/">zee5</a>
-                
-                <a class="tag" href="/tag/drama/">drama</a>
-                
-                <a class="tag" href="/tag/thriller/">thriller</a>
-                
-            </div>
-            
-            
-              Nov 3, 2020
-            
-            
-          </div>
-        </div>
-      
     </div>
 
     <!-- pagination -->
@@ -736,6 +732,10 @@ SimpleJekyllSearch({
   
     
       <a href="/blog/page9/">9</a>
+    
+  
+    
+      <a href="/blog/page10/">10</a>
     
   
 
@@ -784,13 +784,13 @@ SimpleJekyllSearch({
     </div>
   </div>
 </footer>
-<div class="my-notification" id="notification">
+<!-- <div class="my-notification" id="notification">
   <div class="notification" id="notify">
     <div class="wrapper">
       <p>App is updated to see changes please click here or restart app.</p>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
