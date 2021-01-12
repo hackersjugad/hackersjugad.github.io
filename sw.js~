@@ -16,7 +16,7 @@
 // ]
 
 // servie worker
-const cache_Name = "pwa-conf-v1.050";
+const cache_Name = "pwa-conf-v1.057";
 // const staticCacheName = [
 //   '/credits.html',
 //   '/404.html',
@@ -37,9 +37,13 @@ const staticAssets = [
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches.open(cache_Name).then(function (cache) {
-      return cache.addAll(staticAssets);
-    })
+    caches
+      .open(cache_Name).then(function (cache) {
+        return cache.addAll(staticAssets);
+      })
+      .then(() => {
+        self.skipWaiting();
+      })
   );
 });;
 
