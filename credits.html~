@@ -263,7 +263,11 @@ SimpleJekyllSearch({
 <div class="post">
   <h1 class="post-title">Credits</h1>
   <p>A special thanks to <strong><a href="http://github.com" target="_blank">GitHub</a></strong> for providing great hosting service And to all the creators and contributers of <a href="http://jekyllrb.com" target="_blank">jekyll</a> for providing a great tool.</p>
-  <!--<p>We also like to say thanks to <a href="https://github.com/bitbrain">Miguel Gonzalez Sanchez</a> for providing such a good base theme.</p>-->
+<<<<<<< HEAD
+  <!--<p>We also like to say thanks to  for providing such a good base theme.</p>-->
+=======
+  <p>Made with ♥ by <a href="https://www.instagram.com/_im_rahulkumar/">Rahul Kumar Prajapat </a> thanks</p>
+>>>>>>> 00656ab7bb14fffa34c01fba46bd201dcf7f5566
   <br>
   <p><a href="/">Go To Home</a></p>
 </div>
